@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.description {
+  flex: 1;
+}
+
+.photos {
+  flex: 1;
+  height: 100vh;
+  overflow: auto;
+  padding-top: 33vh;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+h1 {
+  font-family: "Roboto Slab", serif;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.dark img {
+  border: 2px solid #fff;
+}
+
+@media (max-width: 420px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 0;
+  }
+
+  .photos {
+    padding-top: 0;
+  }
+}
